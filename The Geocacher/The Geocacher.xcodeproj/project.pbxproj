@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46406C771CB83C160098663F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C761CB83C160098663F /* AppDelegate.swift */; };
+		46406C791CB83C160098663F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C781CB83C160098663F /* ViewController.swift */; };
+		46406C7C1CB83C160098663F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46406C7A1CB83C160098663F /* Main.storyboard */; };
+		46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46406C7D1CB83C160098663F /* The_Geocacher.xcdatamodeld */; };
+		46406C811CB83C160098663F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46406C801CB83C160098663F /* Assets.xcassets */; };
+		46406C841CB83C160098663F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46406C821CB83C160098663F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46406C731CB83C160098663F /* The Geocacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Geocacher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46406C761CB83C160098663F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46406C781CB83C160098663F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46406C7B1CB83C160098663F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46406C7E1CB83C160098663F /* The_Geocacher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = The_Geocacher.xcdatamodel; sourceTree = "<group>"; };
+		46406C801CB83C160098663F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46406C831CB83C160098663F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46406C851CB83C160098663F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46406C701CB83C160098663F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46406C6A1CB83C160098663F = {
+			isa = PBXGroup;
+			children = (
+				46406C751CB83C160098663F /* The Geocacher */,
+				46406C741CB83C160098663F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46406C741CB83C160098663F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46406C731CB83C160098663F /* The Geocacher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46406C751CB83C160098663F /* The Geocacher */ = {
+			isa = PBXGroup;
+			children = (
+				46406C761CB83C160098663F /* AppDelegate.swift */,
+				46406C781CB83C160098663F /* ViewController.swift */,
+				46406C7A1CB83C160098663F /* Main.storyboard */,
+				46406C801CB83C160098663F /* Assets.xcassets */,
+				46406C821CB83C160098663F /* LaunchScreen.storyboard */,
+				46406C851CB83C160098663F /* Info.plist */,
+				46406C7D1CB83C160098663F /* The_Geocacher.xcdatamodeld */,
+			);
+			path = "The Geocacher";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46406C721CB83C160098663F /* The Geocacher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46406C881CB83C160098663F /* Build configuration list for PBXNativeTarget "The Geocacher" */;
+			buildPhases = (
+				46406C6F1CB83C160098663F /* Sources */,
+				46406C701CB83C160098663F /* Frameworks */,
+				46406C711CB83C160098663F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Geocacher";
+			productName = "The Geocacher";
+			productReference = 46406C731CB83C160098663F /* The Geocacher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46406C6B1CB83C160098663F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Kyle Longhurst";
+				TargetAttributes = {
+					46406C721CB83C160098663F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 46406C6E1CB83C160098663F /* Build configuration list for PBXProject "The Geocacher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46406C6A1CB83C160098663F;
+			productRefGroup = 46406C741CB83C160098663F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46406C721CB83C160098663F /* The Geocacher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46406C711CB83C160098663F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46406C841CB83C160098663F /* LaunchScreen.storyboard in Resources */,
+				46406C811CB83C160098663F /* Assets.xcassets in Resources */,
+				46406C7C1CB83C160098663F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46406C6F1CB83C160098663F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46406C791CB83C160098663F /* ViewController.swift in Sources */,
+				46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */,
+				46406C771CB83C160098663F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		46406C7A1CB83C160098663F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46406C7B1CB83C160098663F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46406C821CB83C160098663F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46406C831CB83C160098663F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46406C861CB83C160098663F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46406C871CB83C160098663F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46406C891CB83C160098663F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "The Geocacher/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kylelonghurst.The-Geocacher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46406C8A1CB83C160098663F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "The Geocacher/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kylelonghurst.The-Geocacher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46406C6E1CB83C160098663F /* Build configuration list for PBXProject "The Geocacher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46406C861CB83C160098663F /* Debug */,
+				46406C871CB83C160098663F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46406C881CB83C160098663F /* Build configuration list for PBXNativeTarget "The Geocacher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46406C891CB83C160098663F /* Debug */,
+				46406C8A1CB83C160098663F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		46406C7D1CB83C160098663F /* The_Geocacher.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46406C7E1CB83C160098663F /* The_Geocacher.xcdatamodel */,
+			);
+			currentVersion = 46406C7E1CB83C160098663F /* The_Geocacher.xcdatamodel */;
+			path = The_Geocacher.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 46406C6B1CB83C160098663F /* Project object */;
+}
