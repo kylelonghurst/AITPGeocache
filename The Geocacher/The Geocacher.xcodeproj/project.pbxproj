@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46406C771CB83C160098663F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C761CB83C160098663F /* AppDelegate.swift */; };
-		46406C791CB83C160098663F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C781CB83C160098663F /* ViewController.swift */; };
+		46406C791CB83C160098663F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C781CB83C160098663F /* MapViewController.swift */; };
 		46406C7C1CB83C160098663F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46406C7A1CB83C160098663F /* Main.storyboard */; };
 		46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46406C7D1CB83C160098663F /* The_Geocacher.xcdatamodeld */; };
 		46406C811CB83C160098663F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46406C801CB83C160098663F /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		46406C731CB83C160098663F /* The Geocacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Geocacher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46406C761CB83C160098663F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46406C781CB83C160098663F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46406C781CB83C160098663F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		46406C7B1CB83C160098663F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46406C7E1CB83C160098663F /* The_Geocacher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = The_Geocacher.xcdatamodel; sourceTree = "<group>"; };
 		46406C801CB83C160098663F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,15 +56,47 @@
 		46406C751CB83C160098663F /* The Geocacher */ = {
 			isa = PBXGroup;
 			children = (
-				46406C761CB83C160098663F /* AppDelegate.swift */,
-				46406C781CB83C160098663F /* ViewController.swift */,
-				46406C7A1CB83C160098663F /* Main.storyboard */,
-				46406C801CB83C160098663F /* Assets.xcassets */,
-				46406C821CB83C160098663F /* LaunchScreen.storyboard */,
-				46406C851CB83C160098663F /* Info.plist */,
+				46406C8E1CB83C9E0098663F /* SupportingFiles */,
+				46406C8D1CB83C8D0098663F /* Controller */,
+				46406C8C1CB83C880098663F /* View */,
+				46406C8B1CB83C840098663F /* Model */,
 				46406C7D1CB83C160098663F /* The_Geocacher.xcdatamodeld */,
 			);
 			path = "The Geocacher";
+			sourceTree = "<group>";
+		};
+		46406C8B1CB83C840098663F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		46406C8C1CB83C880098663F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46406C7A1CB83C160098663F /* Main.storyboard */,
+				46406C821CB83C160098663F /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		46406C8D1CB83C8D0098663F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46406C761CB83C160098663F /* AppDelegate.swift */,
+				46406C781CB83C160098663F /* MapViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		46406C8E1CB83C9E0098663F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				46406C801CB83C160098663F /* Assets.xcassets */,
+				46406C851CB83C160098663F /* Info.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46406C791CB83C160098663F /* ViewController.swift in Sources */,
+				46406C791CB83C160098663F /* MapViewController.swift in Sources */,
 				46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */,
 				46406C771CB83C160098663F /* AppDelegate.swift in Sources */,
 			);
