@@ -10,9 +10,9 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="creator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="creates" inverseEntity="User" syncable="YES"/>
         <relationship name="finder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="finds" inverseEntity="User" syncable="YES"/>
-        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeoLocationImage" inverseName="location" inverseEntity="GeoLocationImage" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeolocationImage" inverseName="location" inverseEntity="GeolocationImage" syncable="YES"/>
     </entity>
-    <entity name="GeoLocationImage" parentEntity="Geolocation" syncable="YES">
+    <entity name="GeolocationImage" parentEntity="Geolocation" syncable="YES">
         <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geolocation" inverseName="image" inverseEntity="Geolocation" syncable="YES"/>
     </entity>
@@ -26,7 +26,7 @@
     </entity>
     <elements>
         <element name="Geolocation" positionX="-63" positionY="-18" width="128" height="195"/>
-        <element name="GeoLocationImage" positionX="-45" positionY="81" width="128" height="75"/>
+        <element name="GeolocationImage" positionX="-45" positionY="81" width="128" height="75"/>
         <element name="User" positionX="-54" positionY="18" width="128" height="135"/>
     </elements>
 </model>

@@ -21,6 +21,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Initilization.initData()
+        
         // Show the blue dot to indicate the user location
         mapView.showsUserLocation = true
         
