@@ -60,6 +60,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                         size: String(result.valueForKey("size")!),
                         clue: String(result.valueForKey("clue")!),
                         category: String(result.valueForKey("category")!),
+                        favorite: String(result.valueForKey("latitude")!).toBool(),
                         latitude: String(result.valueForKey("latitude")!),
                         longitude: String(result.valueForKey("longitude")!)
                     )
