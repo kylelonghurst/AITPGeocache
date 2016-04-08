@@ -11,20 +11,23 @@ import MapKit
 
 
 class Geolocation : NSObject, MKAnnotation {
-    var id: Int
     var title: String?
+    var difficulty: String?
+    var size: String?
+    var clue: String?
     var category: String?
-    
     var latitude: Double
     var longitude: Double
     var coordinate: CLLocationCoordinate2D
 
-    init(id: Int, title: String, category: String, latitude: Double, longitude: Double) {
-        self.id = id
+    init(title: String, difficulty: String?, size: String?, clue: String?,category: String?, latitude: String, longitude: String) {
         self.title = title
+        self.difficulty = difficulty
+        self.size = size
+        self.clue = clue
         self.category = category
-        self.latitude = latitude
-        self.longitude = longitude
+        self.latitude = Double(latitude)!
+        self.longitude = Double(longitude)!
         self.coordinate = CLLocationCoordinate2DMake(self.latitude, self.longitude)
         
         super.init()

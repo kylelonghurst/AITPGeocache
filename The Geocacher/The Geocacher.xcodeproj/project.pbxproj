@@ -13,6 +13,11 @@
 		46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46406C7D1CB83C160098663F /* The_Geocacher.xcdatamodeld */; };
 		46406C811CB83C160098663F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46406C801CB83C160098663F /* Assets.xcassets */; };
 		46406C841CB83C160098663F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46406C821CB83C160098663F /* LaunchScreen.storyboard */; };
+		46406CA01CB84E4A0098663F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C9F1CB84E4A0098663F /* User.swift */; };
+		46406CA21CB84E510098663F /* ReduceImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406CA11CB84E510098663F /* ReduceImageHelper.swift */; };
+		46406CA41CB84E5A0098663F /* GeoLocationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406CA31CB84E5A0098663F /* GeoLocationImage.swift */; };
+		46406CA61CB84E670098663F /* GeocacheDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406CA51CB84E670098663F /* GeocacheDetailViewController.swift */; };
+		46406CA81CB84EF60098663F /* init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406CA71CB84EF60098663F /* init.swift */; };
 		863CD15A1CB846B400618BAA /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863CD1591CB846B400618BAA /* Geolocation.swift */; };
 		8678D42F1CB83E250022A737 /* hyatt.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8678D42E1CB83E250022A737 /* hyatt.gpx */; };
 /* End PBXBuildFile section */
@@ -26,6 +31,11 @@
 		46406C801CB83C160098663F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46406C831CB83C160098663F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46406C851CB83C160098663F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46406C9F1CB84E4A0098663F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		46406CA11CB84E510098663F /* ReduceImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceImageHelper.swift; sourceTree = "<group>"; };
+		46406CA31CB84E5A0098663F /* GeoLocationImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationImage.swift; sourceTree = "<group>"; };
+		46406CA51CB84E670098663F /* GeocacheDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocacheDetailViewController.swift; sourceTree = "<group>"; };
+		46406CA71CB84EF60098663F /* init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = init.swift; sourceTree = "<group>"; };
 		863CD1591CB846B400618BAA /* Geolocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
 		8678D42E1CB83E250022A737 /* hyatt.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hyatt.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +82,8 @@
 		46406C8B1CB83C840098663F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46406C9F1CB84E4A0098663F /* User.swift */,
+				46406CA31CB84E5A0098663F /* GeoLocationImage.swift */,
 				863CD1591CB846B400618BAA /* Geolocation.swift */,
 			);
 			name = Model;
@@ -90,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				46406C761CB83C160098663F /* AppDelegate.swift */,
+				46406CA51CB84E670098663F /* GeocacheDetailViewController.swift */,
 				46406C781CB83C160098663F /* MapViewController.swift */,
 			);
 			name = Controller;
@@ -98,9 +111,11 @@
 		46406C8E1CB83C9E0098663F /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				46406CA11CB84E510098663F /* ReduceImageHelper.swift */,
 				8678D42E1CB83E250022A737 /* hyatt.gpx */,
 				46406C801CB83C160098663F /* Assets.xcassets */,
 				46406C851CB83C160098663F /* Info.plist */,
+				46406CA71CB84EF60098663F /* init.swift */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -178,8 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				863CD15A1CB846B400618BAA /* Geolocation.swift in Sources */,
+				46406CA21CB84E510098663F /* ReduceImageHelper.swift in Sources */,
+				46406CA41CB84E5A0098663F /* GeoLocationImage.swift in Sources */,
 				46406C791CB83C160098663F /* MapViewController.swift in Sources */,
 				46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */,
+				46406CA81CB84EF60098663F /* init.swift in Sources */,
+				46406CA01CB84E4A0098663F /* User.swift in Sources */,
+				46406CA61CB84E670098663F /* GeocacheDetailViewController.swift in Sources */,
 				46406C771CB83C160098663F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

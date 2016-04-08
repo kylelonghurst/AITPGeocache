@@ -32,11 +32,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-        let cache = Geolocation(id: 1,
-                              title: "Covention Center",
-                              category: "Cool",
-                              latitude: 41.9763194,
-                              longitude: -87.8643661)
+        let cache = Geolocation(title: "ConventionCenter", difficulty: "Medium", size: "Small", clue: "By AITP", category: "Cool", latitude: "41.9763194", longitude: "-87.8643661")
         
         mapView.addAnnotation(cache)
     }

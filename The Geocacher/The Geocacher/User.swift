@@ -9,7 +9,6 @@
 import UIKit
 
 class User {
-    var id: Int
     var firstName: String
     var lastName: Double
     var email: Double
@@ -17,8 +16,7 @@ class User {
     var image: UIImage?
     var imageData: NSData
     
-    init(id: Int, firstName: String, lastName: Double, email: Double, password: String, image: UIImage?, imageData: NSData) {
-        self.id = id
+    init(firstName: String, lastName: Double, email: Double, password: String, image: UIImage?, imageData: NSData) {
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
