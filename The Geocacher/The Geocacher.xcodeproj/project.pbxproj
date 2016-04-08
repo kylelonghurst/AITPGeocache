@@ -19,6 +19,7 @@
 		46406CA61CB84E670098663F /* GeocacheDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406CA51CB84E670098663F /* GeocacheDetailViewController.swift */; };
 		46406CA81CB84EF60098663F /* init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406CA71CB84EF60098663F /* init.swift */; };
 		46406CAA1CB8590E0098663F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406CA91CB8590E0098663F /* StringExtension.swift */; };
+		46406CAC1CB86A1B0098663F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406CAB1CB86A1B0098663F /* ProfileViewController.swift */; };
 		863CD15A1CB846B400618BAA /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863CD1591CB846B400618BAA /* Geolocation.swift */; };
 		8678D42F1CB83E250022A737 /* hyatt.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8678D42E1CB83E250022A737 /* hyatt.gpx */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		46406CA51CB84E670098663F /* GeocacheDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocacheDetailViewController.swift; sourceTree = "<group>"; };
 		46406CA71CB84EF60098663F /* init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = init.swift; sourceTree = "<group>"; };
 		46406CA91CB8590E0098663F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		46406CAB1CB86A1B0098663F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		863CD1591CB846B400618BAA /* Geolocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
 		8678D42E1CB83E250022A737 /* hyatt.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hyatt.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				46406C761CB83C160098663F /* AppDelegate.swift */,
 				46406CA51CB84E670098663F /* GeocacheDetailViewController.swift */,
 				46406C781CB83C160098663F /* MapViewController.swift */,
+				46406CAB1CB86A1B0098663F /* ProfileViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				46406CA41CB84E5A0098663F /* GeoLocationImage.swift in Sources */,
 				46406C791CB83C160098663F /* MapViewController.swift in Sources */,
 				46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */,
+				46406CAC1CB86A1B0098663F /* ProfileViewController.swift in Sources */,
 				46406CA81CB84EF60098663F /* init.swift in Sources */,
 				46406CA01CB84E4A0098663F /* User.swift in Sources */,
 				46406CA61CB84E670098663F /* GeocacheDetailViewController.swift in Sources */,

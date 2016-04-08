@@ -21,15 +21,6 @@ class GeocacheDetailViewController: UITableViewController {
     ]
     
     var geolocationObj: Geolocation!
-//        Geolocation(
-//        title: String(steakHouse.valueForKey("title")!),
-//        difficulty: String(steakHouse.valueForKey("difficulty")!),
-//        size: String(steakHouse.valueForKey("size")!),
-//        clue: String(steakHouse.valueForKey("clue")!),
-//        category: String(steakHouse.valueForKey("category")!),
-//        latitude: String(steakHouse.valueForKey("latitude")!),
-//        longitude: String(steakHouse.valueForKey("longitude")!)
-//    )
     
     // Outlets
     @IBOutlet weak var geoTitleLabel: UILabel!
@@ -44,5 +35,12 @@ class GeocacheDetailViewController: UITableViewController {
     
     override func viewDidLoad() {
         print("made it")
+        geoTitleLabel.text = geolocationObj.title
+        geoDifficultyLabel.text = geolocationObj.difficulty
+        geoCategoryLabel.text = geolocationObj.category
+        geoSizeLabel.text = geolocationObj.size
+        geoLatitudeLabel.text = String(geolocationObj.latitude)
+        geoLongitudeLabel.text = String(geolocationObj.longitude)
+        geoClueLabel.text = geolocationObj.clue
     }
 }

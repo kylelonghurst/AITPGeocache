@@ -87,10 +87,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
         // Create a variable that you want to send
-        let destinationVC = segue.destinationViewController as! GeocacheDetailViewController
-        destinationVC.geolocationObj = sender as! Geolocation
+        if segue.identifier == "GeocacheDetail" {
+            let destinationVC = segue.destinationViewController as! GeocacheDetailViewController
+            destinationVC.geolocationObj = sender as! Geolocation
+        }
         
     }
     
