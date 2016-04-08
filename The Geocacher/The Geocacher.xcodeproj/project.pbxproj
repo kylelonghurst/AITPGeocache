@@ -16,6 +16,7 @@
 		46406C941CB846D80098663F /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C931CB846D80098663F /* Geolocation.swift */; };
 		46406C961CB847070098663F /* GeoLocationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C951CB847070098663F /* GeoLocationImage.swift */; };
 		46406C981CB847960098663F /* ReduceImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C971CB847960098663F /* ReduceImageHelper.swift */; };
+		46406C9A1CB8488B0098663F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46406C991CB8488B0098663F /* User.swift */; };
 		8678D42F1CB83E250022A737 /* hyatt.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8678D42E1CB83E250022A737 /* hyatt.gpx */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		46406C931CB846D80098663F /* Geolocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
 		46406C951CB847070098663F /* GeoLocationImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationImage.swift; sourceTree = "<group>"; };
 		46406C971CB847960098663F /* ReduceImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduceImageHelper.swift; sourceTree = "<group>"; };
+		46406C991CB8488B0098663F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8678D42E1CB83E250022A737 /* hyatt.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hyatt.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 			children = (
 				46406C931CB846D80098663F /* Geolocation.swift */,
 				46406C951CB847070098663F /* GeoLocationImage.swift */,
+				46406C991CB8488B0098663F /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				46406C961CB847070098663F /* GeoLocationImage.swift in Sources */,
 				46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */,
 				46406C771CB83C160098663F /* AppDelegate.swift in Sources */,
+				46406C9A1CB8488B0098663F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
