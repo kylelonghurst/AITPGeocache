@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     
     @IBOutlet weak var mapView: MKMapView!
@@ -31,6 +31,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        
+        let cache = Geolocation(id: 1,
+                              title: "Covention Center",
+                              category: "Cool",
+                              latitude: 41.9763194,
+                              longitude: -87.8643661)
+        
+        mapView.addAnnotation(cache)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
     }
     
     // this overrides the CLLocationManagerDelegate default method and centers the map on the user's location
@@ -41,6 +52,30 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
         self.mapView.setRegion(region, animated: true)
+    }
+    
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? Geolocation {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+                as? MKPinAnnotationView { // 2
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                // 3
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+//                view.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as UIView
+            }
+            return view
+        }
+        return nil
     }
 
 }
