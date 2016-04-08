@@ -103,21 +103,37 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if let annotation = annotation as? Geolocation {
             let identifier = "pin"
             var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
-                as? MKPinAnnotationView { // 2
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView {
                 dequeuedView.annotation = annotation
                 view = dequeuedView
             } else {
-                // 3
+
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
-//                view.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as UIView
+                
+                view.rightCalloutAccessoryView = UIButton.init(type: .DetailDisclosure) as UIButton
             }
             return view
         }
         return nil
     }
-
+    
+    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == annotationView.rightCalloutAccessoryView {
+            let geolocationObj = annotationView.annotation as! Geolocation
+            performSegueWithIdentifier("GeocacheDetail", sender: geolocationObj)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        // Create a variable that you want to send
+        let destinationVC = segue.destinationViewController as! GeocacheDetailViewController
+        destinationVC.geolocationObj = sender as! Geolocation
+        
+    }
 }
+
+
 
