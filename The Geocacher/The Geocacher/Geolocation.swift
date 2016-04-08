@@ -2,8 +2,8 @@
 //  Geolocation.swift
 //  The Geocacher
 //
-//  Created by Kyle Longhurst on 4/8/16.
-//  Copyright © 2016 Kyle Longhurst. All rights reserved.
+//  Created by  on 4/8/16.
+//  Copyright © 2016 . All rights reserved.
 //
 
 import Foundation
