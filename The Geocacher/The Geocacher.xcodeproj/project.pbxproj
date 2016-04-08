@@ -13,6 +13,7 @@
 		46406C7F1CB83C160098663F /* The_Geocacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46406C7D1CB83C160098663F /* The_Geocacher.xcdatamodeld */; };
 		46406C811CB83C160098663F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46406C801CB83C160098663F /* Assets.xcassets */; };
 		46406C841CB83C160098663F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46406C821CB83C160098663F /* LaunchScreen.storyboard */; };
+		8678D42F1CB83E250022A737 /* hyatt.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8678D42E1CB83E250022A737 /* hyatt.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		46406C801CB83C160098663F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46406C831CB83C160098663F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46406C851CB83C160098663F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8678D42E1CB83E250022A737 /* hyatt.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hyatt.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		46406C8E1CB83C9E0098663F /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8678D42E1CB83E250022A737 /* hyatt.gpx */,
 				46406C801CB83C160098663F /* Assets.xcassets */,
 				46406C851CB83C160098663F /* Info.plist */,
 			);
@@ -157,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8678D42F1CB83E250022A737 /* hyatt.gpx in Resources */,
 				46406C841CB83C160098663F /* LaunchScreen.storyboard in Resources */,
 				46406C811CB83C160098663F /* Assets.xcassets in Resources */,
 				46406C7C1CB83C160098663F /* Main.storyboard in Resources */,
@@ -324,6 +328,7 @@
 				46406C8A1CB83C160098663F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
