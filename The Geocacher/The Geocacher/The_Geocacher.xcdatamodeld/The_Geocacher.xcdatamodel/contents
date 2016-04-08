@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Geolocation" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="creator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="creates" inverseEntity="User" syncable="YES"/>
+        <relationship name="finder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="finds" inverseEntity="User" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GeoLocationImage" inverseName="location" inverseEntity="GeoLocationImage" syncable="YES"/>
+    </entity>
+    <entity name="GeoLocationImage" parentEntity="Geolocation" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Geolocation" inverseName="image" inverseEntity="Geolocation" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="creates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Geolocation" inverseName="creator" inverseEntity="Geolocation" syncable="YES"/>
+        <relationship name="finds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Geolocation" inverseName="finder" inverseEntity="Geolocation" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Geolocation" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="GeoLocationImage" positionX="-45" positionY="81" width="128" height="75"/>
+        <element name="User" positionX="-54" positionY="18" width="128" height="150"/>
+    </elements>
 </model>
