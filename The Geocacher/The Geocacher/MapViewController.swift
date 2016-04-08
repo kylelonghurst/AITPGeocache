@@ -15,6 +15,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBAction func filterButtonTapped(sender: AnyObject) {
+        showFilter()
+    }
     
     //    declare the location manager here
     var locationManager:CLLocationManager!
@@ -35,49 +38,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let context: NSManagedObjectContext = appDel.managedObjectContext
-        
-        let request = NSFetchRequest(entityName: "Geolocation")
-        
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            
-            let results = try context.executeFetchRequest(request)
-            
-            if results.count > 0 {
-                
-                for result in results as! [NSManagedObject] {
-                    
-                    print(result)
-                    print(result.valueForKey("category"))
-                    
-                    let newPin = Geolocation(
-                        title: String(result.valueForKey("title")!),
-                        difficulty: String(result.valueForKey("difficulty")!),
-                        size: String(result.valueForKey("size")!),
-                        clue: String(result.valueForKey("clue")!),
-                        category: String(result.valueForKey("category")!),
-                        favorite: String(result.valueForKey("latitude")!).toBool(),
-                        latitude: String(result.valueForKey("latitude")!),
-                        longitude: String(result.valueForKey("longitude")!)
-                    )
-                    
-                    mapView.addAnnotation(newPin)
-                    
-                }
-                
-            }
-            
-        } catch {
-            
-            print("Fetch Failed")
-        }
-
-    
-        
+        displayAnnotations(false)
     
     }
     
@@ -131,6 +92,73 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let destinationVC = segue.destinationViewController as! GeocacheDetailViewController
         destinationVC.geolocationObj = sender as! Geolocation
         
+    }
+    
+    func displayAnnotations(favorites: Bool)
+    {
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        let request = NSFetchRequest(entityName: "Geolocation")
+        
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            
+            let results = try context.executeFetchRequest(request)
+            
+            if results.count > 0 {
+                
+                for result in results as! [NSManagedObject] {
+                    
+                    print(result)
+                    print(result.valueForKey("category"))
+                    
+                    let newPin = Geolocation(
+                        title: String(result.valueForKey("title")!),
+                        difficulty: String(result.valueForKey("difficulty")!),
+                        size: String(result.valueForKey("size")!),
+                        clue: String(result.valueForKey("clue")!),
+                        category: String(result.valueForKey("category")!),
+                        favorite: String(result.valueForKey("favorite")!).toBool(),
+                        latitude: String(result.valueForKey("latitude")!),
+                        longitude: String(result.valueForKey("longitude")!)
+                    )
+                    
+                    print(newPin.favorite)
+                    
+                    if ((favorites == true && newPin.favorite == true) || favorites == false)
+                    {
+                        mapView.addAnnotation(newPin)
+                    }
+
+                }
+                
+            }
+            
+        } catch {
+            
+            print("Fetch Failed")
+        }
+
+    }
+    
+    func showFilter()
+    {
+        let alertController = UIAlertController(title: "Choose Filter", message: nil, preferredStyle:UIAlertControllerStyle.ActionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "All", style: UIAlertActionStyle.Default)
+        { action -> Void in
+                    self.mapView.removeAnnotations(self.mapView.annotations)
+                    self.displayAnnotations(false)
+            })
+        alertController.addAction(UIAlertAction(title: "Favorites", style: UIAlertActionStyle.Default)
+        { action -> Void in
+                    self.mapView.removeAnnotations(self.mapView.annotations)
+                    self.displayAnnotations(true)
+            })
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
 
