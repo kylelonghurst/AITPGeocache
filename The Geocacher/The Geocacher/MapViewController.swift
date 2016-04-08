@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
@@ -34,13 +35,54 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-        let cache = Geolocation(title: "ConventionCenter", difficulty: "Medium", size: "Small", clue: "By AITP", category: "Cool", favorite: "true".toBool(), latitude: "41.9763194", longitude: "-87.8643661")
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        mapView.addAnnotation(cache)
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        let request = NSFetchRequest(entityName: "Geolocation")
+        
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            
+            let results = try context.executeFetchRequest(request)
+            
+            if results.count > 0 {
+                
+                for result in results as! [NSManagedObject] {
+                    
+                    print(result)
+                    print(result.valueForKey("category"))
+                    
+                    let newPin = Geolocation(
+                        title: String(result.valueForKey("title")!),
+                        difficulty: String(result.valueForKey("difficulty")!),
+                        size: String(result.valueForKey("size")!),
+                        clue: String(result.valueForKey("clue")!),
+                        category: String(result.valueForKey("category")!),
+                        latitude: String(result.valueForKey("latitude")!),
+                        longitude: String(result.valueForKey("longitude")!)
+                    )
+                    
+                    mapView.addAnnotation(newPin)
+                    
+                }
+                
+            }
+            
+        } catch {
+            
+            print("Fetch Failed")
+        }
+
+    
+        
+    
     }
     
     override func viewWillAppear(animated: Bool) {
     }
+
     
     // this overrides the CLLocationManagerDelegate default method and centers the map on the user's location
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
